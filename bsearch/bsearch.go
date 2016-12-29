@@ -14,6 +14,5 @@ func BSearch(array []int, el int) int {
 			high = mid - 1
 		}
 	}
-
 	return -1
 }
