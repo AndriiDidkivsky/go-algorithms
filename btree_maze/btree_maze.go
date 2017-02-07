@@ -10,11 +10,10 @@ type Node struct {
 
 func GenerateMaze(width, height int) [][]Node {
 	maze := initMaze(width, height)
-	sy, sx := 0, 0
 
-	for y := sy; y < height; y++ {
-		for x := sx; x < width; x++ {
-			if y != sy {
+	for y := 0; y < height; y++ {
+		for x := 0; x < width; x++ {
+			if y != 0 {
 				//if right
 				if rand.Intn(2) == 0 {
 					if x != width {
