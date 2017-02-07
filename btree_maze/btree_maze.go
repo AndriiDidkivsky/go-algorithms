@@ -1,7 +1,6 @@
 package btree_maze
 
 import (
-	"fmt"
 	"math/rand"
 )
 
@@ -32,7 +31,6 @@ func GenerateMaze(width, height int) [][]Node {
 			}
 		}
 	}
-	DrawMaze(maze)
 	return maze
 }
 
