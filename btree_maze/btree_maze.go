@@ -5,7 +5,7 @@ import (
 )
 
 type Node struct {
-	bottomWall, rightWall bool
+	BottomWall, RightWall bool
 }
 
 func GenerateMaze(width, height int) [][]Node {
@@ -17,16 +17,16 @@ func GenerateMaze(width, height int) [][]Node {
 				//if right
 				if rand.Intn(2) == 0 {
 					if x != width {
-						maze[y][x].rightWall = false
+						maze[y][x].RightWall = false
 					} else {
-						maze[y-1][x].bottomWall = false
+						maze[y-1][x].BottomWall = false
 					}
 				} else {
-					maze[y-1][x].bottomWall = false
+					maze[y-1][x].BottomWall = false
 				}
 
 			} else if x != width {
-				maze[y][x].rightWall = false
+				maze[y][x].RightWall = false
 			}
 		}
 	}
@@ -38,8 +38,8 @@ func initMaze(width, height int) [][]Node {
 	for i := 0; i < width; i++ {
 		maze[i] = make([]Node, height)
 		for j := 0; j < height; j++ {
-			maze[i][j].bottomWall = true
-			maze[i][j].rightWall = true
+			maze[i][j].BottomWall = true
+			maze[i][j].RightWall = true
 		}
 	}
 
